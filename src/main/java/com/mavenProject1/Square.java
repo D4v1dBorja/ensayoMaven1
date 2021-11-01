@@ -1,12 +1,18 @@
 package com.mavenProject1;
 import lombok.Setter;
 import lombok.Getter;
-import lombok.experimental.SuperBuilder;
 @Getter
 @Setter
-@SuperBuilder
+
 public class Square extends GeometricShape implements SideCounter {
     private double sideLength;
+
+    public Square(double sideLength){
+        super(0,0);
+        this.sideLength = sideLength;
+        calculateArea();
+        calculatePerimeter();
+    }
 
     @Override
     public void numberOfSides(){

@@ -1,7 +1,6 @@
 package com.mavenProject1;
-import lombok.experimental.SuperBuilder;
-
-@SuperBuilder
+import lombok.AllArgsConstructor;
+@AllArgsConstructor
 public abstract class GeometricShape {
     public double area;
     public double perimeter;

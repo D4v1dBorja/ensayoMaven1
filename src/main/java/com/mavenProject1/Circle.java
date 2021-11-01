@@ -1,12 +1,19 @@
 package com.mavenProject1;
 import lombok.Setter;
 import lombok.Getter;
-import lombok.experimental.SuperBuilder;
+
 @Getter
 @Setter
-@SuperBuilder
+
 public class Circle extends GeometricShape{
     private double radius;
+
+    public Circle(double radius) {
+        super(0, 0);
+        this.radius = radius;
+        calculateArea();
+        calculatePerimeter();
+    }
 
     @Override
     public double calculateArea(){
