@@ -15,12 +15,14 @@ public class Square extends GeometricShape implements SideCounter {
 
     @Override
     public double calculateArea(){
-        return sideLength*sideLength;
+        area = sideLength*sideLength;
+        return area;
     }
 
     @Override
     public double calculatePerimeter(){
-        return 4.0*sideLength;
+        perimeter = 4.0*sideLength;
+        return perimeter;
     }
 
     @Override
